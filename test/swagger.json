@@ -1,0 +1,76 @@
+{
+  "swagger": "2.0",
+  "info": {
+    "version": "<your API version>",
+    "title": "<your API title>",
+    "description": "<your API description>",
+    "termsOfService": "<your API terms of service>"
+  },
+  "host": "hisol-sb-004.servicebus.windows.net",
+  "paths": {
+    "/MobApps3/GetAddress": {
+      "get": {
+        "description": "Get the address of an employee by looking up his/her employee ID.",
+        "operationId": "GetAddress",
+        "parameters": [
+          {
+            "name": "EmployeeId",
+            "in": "query",
+            "description": "",
+            "required": true,
+            "type": "integer"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "schema": {
+              "$ref": "#/definitions/Address"
+            }
+          }
+        }
+      }
+    },
+    "/MobApps3/UpdateAddress": {
+      "post": {
+        "description": "Update the address of an employee by looking up his/her employee ID.",
+        "operationId": "UpdateAddress",
+        "parameters": [
+          {
+            "name": "body",
+            "in": "body",
+            "description": "",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/Address"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": ""
+          }
+        }
+      }
+    }
+  },
+  "definitions": {
+    "Address": {
+      "type": "object",
+      "properties": {
+        "City": {
+          "type": "string"
+        },
+        "EmployeeId": {
+          "type": "string"
+        },
+        "Postcode": {
+          "type": "string"
+        },
+        "Street": {
+          "type": "string"
+        }
+      }
+    }
+  }
+}

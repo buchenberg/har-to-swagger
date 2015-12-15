@@ -6,7 +6,9 @@
     "generate-schema": "^2.1.1",
     "har": "^1.0.0",
     "string": "^3.3.1",
-    "underscore": "^1.8.3"
+    "swagger-tools": "^0.9.9",
+    "underscore": "^1.8.3",
+    "winston": "^2.1.1"
   },
   "description": "A library to generate Swagger 2.0 JSON format of an API from its sample HAR file.",
   "main": "index.js",
