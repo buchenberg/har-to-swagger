@@ -1,9 +1,9 @@
 {
   "name": "har-to-swagger",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "dependencies": {
     "debug": "~2.2.0",
-    "generate-schema": "^2.1.1",
+    "generate-schema": "guangyang/generate-schema",
     "har": "^1.0.0",
     "string": "^3.3.1",
     "swagger-tools": "^0.9.9",
