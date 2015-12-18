@@ -1,9 +1,17 @@
 var fs = require('fs');
+var _ = require('underscore');
+var S = require('string');
 var h2s = require('../index.js');
 
-var harContent = fs.readFileSync(__dirname + '/sample.har', 'utf8');
+var harFiles = _.filter(fs.readdirSync(__dirname), function (file) {
+	return S(file).endsWith('.har');
+})
 
-var result = h2s.generate(harContent);
-
-fs.writeFileSync(__dirname + '/swagger.json', JSON.stringify(result.swagger, null, 2));
-fs.writeFileSync(__dirname + '/validation-result.json', JSON.stringify(result.validationResult, null, 2));
+_.each(harFiles, function (file, index, files) {
+	var sample = fs.readFileSync(__dirname + '/' + file, 'utf8');
+  var fileNameWithoutExtension = S(file).strip('.har');
+  h2s.generateAsync(sample, function (err, result) {
+    fs.writeFileSync(__dirname + '/' + fileNameWithoutExtension + '-swagger.json', JSON.stringify(result.swagger, null, 2));
+    fs.writeFileSync(__dirname + '/' + fileNameWithoutExtension + '-validation-result.json', JSON.stringify(result.validationErrors, null, 2));
+  });
+});
