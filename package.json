@@ -1,12 +1,11 @@
 {
   "name": "har-to-swagger",
-  "version": "0.1.3",
+  "version": "0.1.4",
   "dependencies": {
     "debug": "~2.2.0",
     "generate-schema": "guangyang/generate-schema",
     "har": "^1.0.0",
     "string": "^3.3.1",
-    "swagger-tools": "^0.9.9",
     "underscore": "^1.8.3",
     "winston": "^2.1.1"
   },
