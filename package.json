@@ -1,13 +1,13 @@
 {
   "name": "har-to-swagger",
-  "version": "0.1.4",
+  "version": "0.1.5",
   "dependencies": {
     "debug": "~2.2.0",
     "generate-schema": "guangyang/generate-schema",
     "har": "^1.0.0",
     "string": "^3.3.1",
-    "underscore": "^1.8.3",
-    "winston": "^2.1.1"
+    "swagger-parser": "^3.3.0",
+    "underscore": "^1.8.3"
   },
   "description": "A library to generate Swagger 2.0 JSON format of an API from its sample HAR file.",
   "main": "index.js",
