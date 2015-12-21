@@ -1,6 +1,6 @@
 {
   "name": "har-to-swagger",
-  "version": "0.1.6",
+  "version": "0.1.7",
   "dependencies": {
     "debug": "~2.2.0",
     "generate-schema": "guangyang/generate-schema",
