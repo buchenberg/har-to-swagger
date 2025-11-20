@@ -3,7 +3,7 @@
   "version": "0.1.8",
   "dependencies": {
     "debug": "~2.2.0",
-    "generate-schema": "git+https://github.com/guangyang/generate-schema.git",
+    "generate-schema": "^2.6.0",
     "har": "^1.0.0",
     "node-uuid": "^1.4.7",
     "string": "^3.3.1",
